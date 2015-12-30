@@ -1,5 +1,6 @@
 # Go forward. When we're about to hit something, stop and go backwards to the starting point.
 from gopigo import *
+import signal
 
 us_port = 15
 distance_to_stop = 100
@@ -20,5 +21,7 @@ def move_forward():
 
 def move_backward(dist):
   # No-op
+
+signal.signal(signal.SIGINT, stop)
 
 main()
