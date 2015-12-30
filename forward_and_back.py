@@ -1,6 +1,6 @@
 # Go forward. When we're about to hit something, stop and go backwards to the starting point.
 from gopigo import *
-import signal
+import signal, sys
 
 us_port = 15
 distance_to_stop = 100
