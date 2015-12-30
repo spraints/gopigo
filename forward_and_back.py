@@ -10,18 +10,21 @@ def main():
   move_backward(dist)
 
 def move_forward():
+  start = time.time()
   fwd()
   while True:
     dist = us_dist(us_port)
     sys.stdout.write(str.format("\rDist: {0}   ", dist))
     if dist < distance_to_stop:
       stop()
-      return 0
+      break
     time.sleep(0.1)
+  return time.time() - start
 
 def move_backward(dist):
-  # No-op
-  True
+  bwd()
+  time.sleep(dist)
+  stop()
 
 def done(sig, stackframe):
   stop()
