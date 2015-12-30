@@ -23,7 +23,7 @@ def move_backward(dist):
   # No-op
   True
 
-def done(_, _):
+def done(sig, stackframe):
   stop()
   sys.stdout.write("\n")
 
