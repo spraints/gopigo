@@ -14,13 +14,14 @@ def move_forward():
   while True:
     dist = us_dist(us_port)
     sys.stdout.write("\rDist: " + dist + "    ")
-    if dist < distance_to_stop
+    if dist < distance_to_stop:
       stop()
       return 0
     time.sleep(0.1)
 
 def move_backward(dist):
   # No-op
+  True
 
 signal.signal(signal.SIGINT, stop)
 
