@@ -3,7 +3,7 @@ from gopigo import *
 import signal, sys
 
 us_port = 15
-distance_to_stop = 50
+distance_to_stop = 30
 
 def main():
   dist = move_forward()
@@ -30,4 +30,4 @@ def done(sig, stackframe):
 signal.signal(signal.SIGINT, done)
 
 main()
-done()
+done(False, False)
