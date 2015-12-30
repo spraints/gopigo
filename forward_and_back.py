@@ -13,7 +13,7 @@ def move_forward():
   fwd()
   while True:
     dist = us_dist(us_port)
-    sys.stdout.write(str.format("\rDist: %4d", dist))
+    sys.stdout.write(str.format("\rDist: {0}   ", dist))
     if dist < distance_to_stop:
       stop()
       return 0
